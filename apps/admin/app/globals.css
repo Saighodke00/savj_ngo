@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --admin-bg: #0f172a;
+  --admin-sidebar: #1e293b;
+  --admin-card: #1e293b;
+  --admin-border: #334155;
+  --admin-accent: #00796B;
+  --admin-amber: #f59e0b;
+  --admin-text: #f1f5f9;
+  --admin-text-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--admin-bg);
+  color: var(--admin-text);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Glow effect for accent elements */
+.glow-teal {
+  box-shadow: 0 0 20px rgba(0, 121, 107, 0.3);
+}
+
+.glow-amber {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Glass morphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Stat card premium hover */
+.stat-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Table row hover */
+.table-row-hover:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Active nav link */
+.nav-active {
+  background: linear-gradient(90deg, rgba(0, 121, 107, 0.2), transparent);
+  border-left: 3px solid #00796B;
+  color: #ffffff;
+}
+
+/* Timeline dot pulse */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.timeline-dot-active {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
